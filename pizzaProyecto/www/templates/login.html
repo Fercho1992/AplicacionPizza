@@ -1,0 +1,34 @@
+<ion-view view-title="Login" hide-nav-bar="true" >
+
+  <ion-content class="padding">
+      
+<!--
+      <div class="item item-image" style="text-align: center;" >
+      <img src="img/login.png">
+      </div>
+-->
+         <div class="list card "> 
+    <form >
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Usuario: </span>
+          <input type="text" ng-model="data.username">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Contraseña: </span>
+          <input type="password" ng-model="data.password">
+        </label>
+        <label class="item" style="text-align: center;">
+          <button class="button button-outline button-assertive" href="#/app/inicio"  >Acceder</button>
+            <!--<button class="button button-outline button-assertive" type="submit" href="#/app/inicio"  >Acceder</button>-->
+        </label>
+        </div>
+    </form>
+          <form>
+          <div class="list" style="text-align: center;" >
+              <a class="item item-icon-right" href="#/app/registro"><button class="button button-assertive" >Registro</button></a>
+          </div>
+              </form>
+      </div>
+  </ion-content>
+</ion-view>
