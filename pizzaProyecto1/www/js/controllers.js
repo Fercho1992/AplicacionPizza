@@ -1,4 +1,4 @@
-angular.module('app.controllers', [])
+angular.module('starter.controllers', [])
   
 .controller('loginCtrl', function($scope,$ionicModal, $timeout) {
     
@@ -39,7 +39,8 @@ angular.module('app.controllers', [])
     console.log('controlador user');
     
    $scope.listarUser=function(){
-     console.log("listar"); userFactory.query().$promise.then(listaok,listaerror);//haciendo un consulta  
+     console.log("listar"); 
+     userFactory.query().$promise.then(listaok,listaerror);//haciendo un consulta  
     }
     
     
@@ -59,9 +60,49 @@ angular.module('app.controllers', [])
 //})
 
 
-      
-.controller('registroCtrl', function($scope,userFactory) {
+.controller('updateUserCtrl',function($scope,$stateParams,userFactory){
+    console.log("Actualizar");
+    $scope.parametro=$stateParams.userid;
     
+    userFactory.get({
+        id:$scope.parametro
+    }).$promise.then(updateOk,updateError);
+    
+    
+    function updateOk(user){
+        $scope.user=user;
+    }
+    function updateError(error){
+        console.log(error);
+    }
+    
+    $scope.actualizarUser=function(){
+        
+       userFactory.update({
+        id:$scope.parametro
+    },{
+        usuario:$scope.user.usuario,
+        contrasena:$scope.user.contrasena,
+        nombre:$scope.user.nombre,
+        apellido:$scope.user.apellido,
+        cedula:$scope.user.cedula,
+        direccion:$scope.user.direccion,
+        telefono:$scope.user.telefono
+    }).
+    $promise.then(
+        function(userActualizado){
+        $scope.user=userActualizado;
+        },
+           function(error){
+            console.log(error);
+        })  
+    }
+   
+})
+
+
+.controller('registroUserCtrl', function($scope,userFactory) {
+    console.log("Registro");
      //ssacamos lso nombre del servidor
     $scope.newUser={
         usuario:'',
@@ -130,43 +171,5 @@ angular.module('app.controllers', [])
 
 
 
-.controller('updateUserCtrl',function($scope,$stateParams,userFactory){
-    console.log("Actualizar");
-    $scope.parametro=$stateParams.userid;
-    
-    userFactory.get({
-        id:$scope.parametro
-    }).$promise.then(updateOk,updateError);
-    
-    
-    function updateOk(user){
-        $scope.user=user;
-    }
-    function updateError(error){
-        console.log(error);
-    }
-    
-    $scope.actualizarUser=function(){
-        
-       userFactory.update({
-        id:$scope.parametro
-    },{
-        usuario:$scope.user.usuario,
-        contrasena:$scope.user.contrasena,
-        nombre:$scope.user.nombre,
-        apellido:$scope.user.apellido,
-        cedula:$scope.user.cedula,
-        direccion:$scope.user.direccion,
-        telefono:$scope.user.telefono
-    }).
-    $promise.then(
-        function(userActualizado){
-        $scope.user=userActualizado;
-        },
-           function(error){
-            console.log(error);
-        })  
-    }
-   
-})
+
  

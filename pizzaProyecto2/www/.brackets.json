@@ -1,0 +1,9 @@
+{
+    "jscodehints.detectedExclusions": [
+        "C:/Users/FernandoAlexander/Desktop/pizzaProyecto/www/lib/ionic/js/ionic.min.js",
+        "C:/Users/FernandoAlexander/Desktop/pizzaProyecto/www/js/app.js",
+        "C:/Users/FernandoAlexander/Desktop/pizzaProyecto/www/lib/ionic/js/ionic.js",
+        "C:/Users/FernandoAlexander/Desktop/pizzaProyecto/www/lib/ionic/js/ionic.bundle.min.js",
+        "C:/Users/FernandoAlexander/Desktop/pizzaProyecto/www/js/factories.js"
+    ]
+}

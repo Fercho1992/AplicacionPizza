@@ -1,0 +1,46 @@
+<ion-view title="Registro">
+    <ion-content overflow-scroll="false" padding="false" scroll="false" class="has-header">
+         <div class="col">
+       <p> {{newUser.usuario}}</p>
+          <p> {{newUser.contrasena}}</p>
+            <p> {{newUser.nombre}}</p>
+              <p> {{newUser.apellido}}</p>
+              <p> {{newUser.cedula}}</p>
+              <p> {{newUser.direccion}}</p>
+              <p> {{newUser.telefono}}</p>
+        </div>
+        <form class="list" ng-submit="registrarNuevaUser()">
+            <ion-list>
+                <label class="item item-input">
+                    <span class="input-label">Usuario</span>
+                    <input type="text" placeholder="">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Contraseña</span>
+                    <input type="text" placeholder="">
+                </label>
+            </ion-list>
+            <label class="item item-input">
+                <span class="input-label">Nombre</span>
+                <input type="text" placeholder="">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Apellido</span>
+                <input type="text" placeholder="">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Cedula</span>
+                <input type="text" placeholder="">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Direccion</span>
+                <input type="text" placeholder="">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Telefono</span>
+                <input type="text" placeholder="">
+            </label>
+            <a type="submit"  class="button button-stable button-block ">Registar</a>
+        </form>
+    </ion-content>
+</ion-view>
