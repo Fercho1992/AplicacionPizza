@@ -1,0 +1,50 @@
+    <ion-view title="Usuarios">
+    <ion-content overflow-scroll="true" padding="true" scroll="true" class="has-header">
+    <div>
+        <h3>{{user.usuario}}</h3>
+        <p> {{user.contrasena}}</p>
+        <p> {{user.nombre}}</p>
+        <p> {{user.apellido}}</p>
+        <p> {{user.cedula}}</p>
+        <p> {{user.direccion}}</p>
+        <p> {{user.telefono}}</p>
+    </div>
+        
+        <!--Formulario para actualizar nueva usuario-->
+        
+    <form class="list" ng-submit="actualizarUser()">
+        <ion-list>
+        <label class="item item-input">
+            <span class="input-label">Usuario</span>
+            <input type="text" placeholder="luis123" ng-model="user.usuario">
+        </label>
+        <label class="item item-input">
+            <span class="input-label">Contraseña</span>
+            <input type="password"  placeholder="****" ng-model="user.contrasena">
+        </label>
+    </ion-list>
+    <label class="item item-input">
+        <span class="input-label">Nombre</span>
+        <input type="text" placeholder="Luis" ng-model="user.nombre">
+    </label>
+    <label class="item item-input">
+        <span class="input-label">Apellido</span>
+        <input type="text" placeholder="Dias" ng-model="user.apellido">
+    </label>
+    <label class="item item-input">
+        <span class="input-label">Cedula</span>
+        <input type="text" placeholder="1722146531" ng-model="user.cedula">
+    </label>
+    <label class="item item-input">
+        <span class="input-label">Direccion</span>
+        <input type="text" placeholder="12 de Octubre" ng-model="user.direccion">
+    </label>
+    <label class="item item-input">
+        <span class="input-label">Telefono</span>
+        <input type="text" placeholder="0990503537" ng-model="user.telefono">
+    </label> 
+    <button type="submit" class="button button-stable button-block " >Actualizar</button>
+    
+</form>
+</ion-content>
+</ion-view>

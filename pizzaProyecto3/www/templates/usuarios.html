@@ -1,0 +1,44 @@
+<ion-view view-title="Pelicula" >
+<ion-content>
+<h1>Pelicula</h1>
+<div class="list">
+  
+  <ion-item ng-repeat="listaPelicula in pelicula" item="unPastel" class="item-remove-animate">
+  <div class="list card">
+
+   
+   <h1>{{listaPelicula.name}}</h1>
+
+   <div class="item item-body">
+     <a class="item item-thumbnail-left" href="#/app/actualizar/{{listaPelicula.id}}">
+      <img style="width:600px; height:600px;" ng-src={{listaPelicula.image}}>
+      
+      
+      <div class="row">
+        <div class="col">{{listaPelicula.clasificacion}}</p>
+          <p>{{listaPelicula.genero}}</p>
+          <p>{{listaPelicula.duracion}}</p>
+          <p>{{listaPelicula.inicio}}</p>
+          <p>{{listaPelicula.termina}}</p>
+          <p>{{listaPelicula.sinopsis}}</p></div>
+          <div class="col"></div>
+          <div class="col"><p></div>
+          <div class="col"></div>
+          <div class="col"></div>
+        </div>
+        
+      </a>
+    </div>
+  </div>   
+</ion-item>
+</div>
+<button ng-click="listarPelicula();" class="ion-ios-recording button button-outline button-positive">
+  Actualizar
+</button>
+</ion-list>
+</ion-content>
+<ion-footer-bar class="bar bar-header bar-assertive">
+<div class="title">Topicos Especiales</div>
+</ion-footer-bar>
+
+</ion-view>
