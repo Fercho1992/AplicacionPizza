@@ -1,0 +1,44 @@
+<ion-view title="Ingredientes extras">
+      <ion-content overflow-scroll="true" padding="true" scroll="true" class="has-header">
+          
+          <div class="list card" ng-app="starter" ng-controller="ingredienteController">
+            <div class="item item-body">
+                <ion-list>
+                    <label class="item item-input">
+                    <span class="input-label">Ingrediente</span>
+                    <input type="text" ng-model="ingr.txtname">
+                    </label>
+                    
+                    <label class="item item-input">
+                    <span class="input-label">Precio</span>
+                    <input type="text" ng-model="ingr.txtprecio"> 
+                    </label>
+                     <label class="item item-input">
+                          <span class="input-label"> Descripcion</span>
+         <input type="text" ng-model="ingr.txtdescripcion">  
+        </label>
+                    <ion-item> 
+                    </ion-item>
+                </ion-list>
+                 <button class="button button-positive" ng-click="llamar()">
+          Enviar
+        </button>
+            </div>
+
+        <div class="list list-inset">
+
+          <div class="item" ng-repeat="ing in ingredientes">
+          <img  ng-src="{{ing.descripcion}}" width="80px" height="60px" border="0" >
+          <ul>
+<!--            <li>- id: {{ing.id}}</li>-->
+            <li>- Ingrediente: {{ing.name}}</li>
+            <li>- Precio: {{ing.precio}}</li>
+            
+          </ul>
+            
+          </div>
+
+        </div>
+                    </div>
+    </ion-content>
+</ion-view>

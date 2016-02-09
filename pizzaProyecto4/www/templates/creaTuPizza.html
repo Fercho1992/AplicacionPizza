@@ -1,0 +1,40 @@
+    <ion-view title="Crea tu pizza">
+        <ion-content overflow-scroll="true" padding="true" class="has-header">
+            <form class="list">
+                <ion-list>
+                    <label class="item item-input">
+                        <span class="input-label">Cliente</span>
+                        <input type="text" placeholder="">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">Pizza</span>
+                        <input type="text" placeholder="Pizza napolitana">
+                    </label>
+                </ion-list>
+                <div class="list card">
+                    <div class="item item-divider">Ingredientes</div>
+                    <div class="item item-body">
+                        <form class="list">
+                            <ion-checkbox>Queso</ion-checkbox>
+                            <ion-checkbox>Tomate</ion-checkbox>
+                            <ion-checkbox>Peperoni</ion-checkbox>
+                            <ion-checkbox>Jamon</ion-checkbox>
+                            <ion-checkbox>Pimientos</ion-checkbox>
+                            <ion-checkbox>Piña</ion-checkbox>
+                            <ion-checkbox>Pollo</ion-checkbox>
+                            <div class="list card">
+                                <div class="item item-divider">Forma de pago</div>
+                                <div class="item item-body">
+                                    <form class="list">
+                                        <ion-radio>Efectivo</ion-radio>
+                                        <ion-radio>Tarjeta de credito</ion-radio>
+                                    </form>
+                                </div>
+                            </div>
+                            <button class="button button-stable button-block ">Guardar pedido</button>
+                        </form>
+                    </div>
+                </div>
+            </form>
+        </ion-content>
+    </ion-view>

@@ -1,0 +1,35 @@
+
+
+    <div ng-app="usuario" ng-controller="main"> 
+        
+        Usuario:<input type="text" ng-model="variable"><br>
+        Contraseña:<input type="text" ng-model="variable2"><br>
+        Nombre: <input type="text" ng-model="variable3"><br>
+         Apellido: <input type="text" ng-model="variable4"><br>
+          Cedula: <input type="text" ng-model="variable5"><br>
+            Direccion <input type="text" ng-model="variable6"><br>
+            Telefono <input type="text" ng-model="variable7"><br>
+
+            <button ng-click="llamar2()">Enviar</button>
+
+<br>
+<br>
+        
+        <div ng-repeat="mensaje in usuario">
+            <ul>
+                <li>Usuario : {{mensaje.usuario}}  </li>
+                <li>Contrasena : {{mensaje.contrasena}}  </li>
+                <li>Nombre : {{mensaje.nombre}}  </li>
+                <li>Apellido : {{mensaje.apellido}}  </li>
+                <li>Cedula : {{mensaje.cedula}}  </li>
+                <li>Direccion : {{mensaje.direccion}}  </li>
+                <li>Telefono : {{mensaje.telefono}}  </li>
+            </ul>
+        </div>
+
+    </div>
+        
+         <script type="text/javascript" src="https://pizza-server-lenindhp.c9users.io/js/dependencies/sails.io.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.1/angular.min.js"></script>
+        <script type="text/javascript" src="appUser.js"></script>
+         
