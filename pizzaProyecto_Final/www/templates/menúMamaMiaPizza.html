@@ -1,0 +1,25 @@
+<ion-view title="Menú  Mama Mia Pizza">
+<ion-content overflow-scroll="true" padding="true" scroll="true" class="has-header">
+    
+<ion-list ng-app="starter" ng-controller="pizzaController">
+<ion-item >Pizza napolitana
+     <div class="list list-inset">
+         
+   <div class="item" ng-repeat="pizz in pizza">
+            <ul>
+                <li>- Id: {{pizz.id}}</li>
+            <li>- Pizza: {{pizz.name}}</li>
+                <li>- Precio:$ {{pizz.precio}}</li>
+                <li>- Tamano: {{pizz.tamano}}</li>
+                <li><img ng-src="{{pizz.descripcion}}" width="80px" height="60px" border="1px"></li>
+<!--            <li>- Ingredientes: {{pizz.ingrediente}}</li>-->
+            
+          </ul>
+            
+          </div> 
+    </div>
+    </ion-item>
+    
+</ion-list>
+</ion-content>
+</ion-view>

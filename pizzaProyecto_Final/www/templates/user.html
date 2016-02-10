@@ -1,0 +1,26 @@
+<ion-view view-title="Usuarios" >
+<ion-content>
+<div class="list">
+  <ion-item ng-repeat="listaUser in user" item="unUser" class="item-remove-animate">
+     
+  <div class="list card">
+
+   <h2 class="ion-person"> {{listaUser.usuario}}</h2>
+   <div  class="item item-body" >
+        <ion-delete-button class="ion-minus-circled" ng-click="eliminarUser(listaUser,$index)">Eliminar</ion-delete-button>
+<!--<a class="item item-thumbnail-left" href="/templates/actualizar/{{listaUser.id}}" >-->
+        <p>{{listaUser.nombre}} {{listaUser.apellido}}</p>
+         <p>{{listaUser.direccion}}</p>
+         <p>{{listaUser.telefono}}</p>
+<!-- </a>-->
+      </div>
+          </div>
+      
+    </ion-item>
+    </div>
+    <div style="text-align:center">
+        <button ng-click="listarUser();" class="ion-refresh button button-outline button-positive"> Actualizar</button>
+    </div>
+
+</ion-content>
+</ion-view>

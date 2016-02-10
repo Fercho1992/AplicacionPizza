@@ -1,0 +1,153 @@
+<ion-view class="ion-pizza" title="Pizzas">
+      <ion-content overflow-scroll="true" padding="true" scroll="true" class="has-header">
+          <div ng-controller="ingredienteController">
+<!--              <h5>Id pedido</h5>-->
+              
+              <table ng-repeat="ing in ingredientes">
+                  <tr >
+                      <td ng-if="ing.id<=15">{{ing.id}} {{ing.name}}</td>
+                      <td ng-if="ing.id>=16" >{{ing.id}} {{ing.name}}</td>
+                  </tr>
+                
+                    
+              </table>
+        <!--<ul ng-repeat="ing in ingredientes">
+            <li>
+                
+            </li>
+        </ul>
+-->
+         
+          </div>
+          <form class="list"  ng-app="starter" ng-controller="pizzaController">
+          <div class="list card" >
+            <div class="item item-body">
+                <ion-list>
+                    <label class="item item-input">
+                    <span class="input-label">Nombre</span>
+                    <input type="text" ng-model="pizz.txtname" placeholder="Pizza napolitana">
+                    </label>
+                    
+                    <label class="item item-input">
+                    <span class="input-label">Precio</span>
+                    <input type="text" ng-model="pizz.txtprecio" placeholder="25.00"> 
+                    </label>
+                     <label class="item item-input">
+                          <span class="input-label"> Descripcion</span>
+         <input type="text" [ng-value="../img/pizza.png"]  ng-model="pizz.txtdescripcion" >  
+        </label>
+                    <label class="item item-input">
+                          <span class="input-label">Tamano</span>
+         <input type="text" ng-model="pizz.txttamano" placeholder="Pequena, mediana, gran de">  
+        </label>
+                    <label class="item item-input">
+                          <span class="input-label">Creada</span>
+         <input type="text" ng-model="pizz.txtcreada" placeholder="Cliente">  
+        </label>
+                    <ion-item> 
+                    </ion-item>
+                
+               
+                    </ion-list>
+                <div style="text-align:center"><button class="button button-positive" ng-click="llamar()">
+          Crear
+        </button></div>
+                
+              </div>
+              
+              </div>
+                
+          </form>
+          <form ng-app="starter" ng-controller="detalleController">
+          
+              <label class="item item-input">
+                          <span class="input-label">idPizza</span>
+         <input type="text" ng-model="det.txtidpizza" >  
+        </label>
+                            
+              <label class="item item-input">
+                          <span class="input-label">idIngrediente</span>
+         <input type="text" ng-model="det.txtidingrediente" >  
+        </label>
+               
+              <br>
+              <div style="text-align:center"><button class="button button-positive" ng-click="llamarDetalle()">
+          Agregar ingrediente
+        </button></div>
+              
+          </form>
+          
+          <div ng-controller="pedidoController">
+<!--              <h5>Id pedido</h5>-->
+          <div ng-repeat="pet in pedidos" ng-if="$last===true" >
+              {{pet.id}}
+              </div>
+          </div>
+          
+          
+           <div ng-controller="usuarioController">
+<!--              <h5>Id usuario</h5>-->
+          <div ng-repeat="user in usuarios" ng-if="$last===true" >
+              {{user.id}}
+              </div>
+          </div>
+          
+          
+          <br>
+          <form ng-app="starter" ng-controller="detallePedidoUsuarioController">
+          
+              <label class="item item-input">
+                          <span class="input-label">idPedido</span>
+         <input type="text" ng-model="detPed.txtidPedido" >  
+        </label>
+                            
+              <label class="item item-input">
+                          <span class="input-label">idUsuario</span>
+         <input type="text" ng-model="detPed.txtidUsuario" >  
+        </label>
+               
+              <br>
+              <div style="text-align:center"><button class="button button-positive" ng-click="llamardetPed()">
+          Agregar pedido
+        </button></div>
+              
+              
+     
+          </form>
+          
+          
+          <div ng-controller="pizzaController">
+<!--              <h5>Id pedido</h5>-->
+        <ul ng-repeat="pizz in pizza">
+            <li>
+                {{pizz.id}} {{pizz.name}}
+            </li>
+        </ul>
+         
+          </div>
+          
+          
+          <br>
+          
+          <form ng-app="starter" ng-controller="detallePedidoController">
+          
+              <label class="item item-input">
+                          <span class="input-label">idPedido</span>
+         <input type="text" ng-model="detPedC.txtidPedidoC" >  
+        </label>
+                            
+              <label class="item item-input">
+                          <span class="input-label">idPizza</span>
+         <input type="text" ng-model="detPedC.txtidPizzaC" >  
+        </label>
+               
+              <br>
+              <div style="text-align:center"><button class="button button-positive" ng-click="llamarPedC()">
+          Agregar pizza
+        </button></div>
+              
+          </form>
+          
+          
+    </ion-content>
+</ion-view>

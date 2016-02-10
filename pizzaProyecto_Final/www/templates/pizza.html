@@ -1,0 +1,38 @@
+<ion-view view-title="Usuarios" >
+<ion-content>
+<h1>Usuarios</h1>
+<div class="list">
+  
+  <ion-item ng-repeat="listaUser in user" item="unUser" class="item-remove-animate">
+  <div class="list card">
+
+   
+   <h1>{{listaUser.usuario}}</h1>
+
+   <div class="item item-body">
+     <a class="item item-thumbnail-left" href="#/app/actualizar/{{listaUser.id}}">
+       
+       <div class="row">
+         <p><div class="col">
+           {{listaUser.nombre}}</div>
+          <p>{{listaUser.apellido}}</p>
+          <p>{{listaUser.contrasena}}</p> 
+          <p>{{listaUser.cedula}}</p>
+          <p>{{listaUser.direccion}}</p>
+          <p>{{listaUser.telefono}}</p>
+          <div class="col"></div>
+          <div class="col"><p></div>
+          <div class="col"></div>
+          <div class="col"></div>
+        </div>
+        
+      </a>
+    </div>
+  </div>   
+</ion-item>
+</div>
+<button ng-click="listarUser();" class="ion-ios-recording button button-outline button-positive">
+  Actualizar
+</button>
+</ion-content>
+</ion-view>

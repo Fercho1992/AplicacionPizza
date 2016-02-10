@@ -1,0 +1,29 @@
+    <ion-view style="text-align:center" title="Login">
+        <ion-content overflow-scroll="true" padding="true" scroll="true" class="has-header">
+            <div class="list card">
+                <div class="item item-divider">Mama Mia Pizza</div>
+                <div class="item item-body">
+                    <div style="text-align:center;">
+                        <img src="img/TIvNq9EfSCqRiKkXqI6W_logo.png" width="100%" height="auto">
+                    </div>
+                </div>
+            </div>
+            <form class="list">
+                <ion-list>
+                    <label class="item item-input">
+                        <span class="input-label">Usuario</span>
+                        <input type="text" placeholder="" ng-model="data.username">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">Password</span>
+                        <input type="password" placeholder="" ng-model="data.password">
+                    </label>
+                </ion-list>
+                <button class="button button-stable button-block " ng-click="login()" style="text-align:center" >Ingresar</button>
+            </form>
+            <div style="text-align:center"><button  class="button button-clear button-positive" ui-sref="registro" >Registrate</button>
+            </div>
+                 
+              
+        </ion-content>
+    </ion-view>

@@ -1,0 +1,26 @@
+<ion-view title="Pedidos">
+<ion-content overflow-scroll="false" padding="false" scroll="true" class="has-header">
+<form class="list"  ng-app="starter" ng-controller="pedidoController" >
+    <ion-list>
+    <label class="item item-input">
+        
+        <span class="input-label">Forma de pago</span>
+        <input type="text" placeholder="Efectivo o credito" ng-model="pedid.txtformaPago">
+    </label>
+    <label class="item item-input">
+        <span class="input-label">Estado</span>
+        <input type="text"  placeholder="Pendientes/Atendido" ng-model="pedid.txtestado">
+    </label>
+    <label class="item item-input">
+        <span class="input-label">Hora de atencion</span>
+        <input type="text" placeholder="" ng-model="pedid.txthoraAten">
+    </label>
+    <label class="item item-input">
+        <span class="input-label">Total a pagar</span>
+        <input type="text" placeholder="" ng-model="pedid.txttotal">
+    </label>
+    <button ng-click="llamar()"class="button button-stable button-block "  >Realizar pedido</button>
+</ion-list>
+</form>
+</ion-content>
+</ion-view>
